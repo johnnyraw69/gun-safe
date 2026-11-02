@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Gun Safe</title>
+<meta name="apple-mobile-web-app-title" content="Gun Safe">
+<meta name="theme-color" content="#111416">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<script>
+  // Opened from the Home Screen icon: go straight to the inventory.
+  // Otherwise show setup steps, and quietly mark this URL so the icon saved from it launches the app.
+  var APP = "https://claude.ai/artifact/FBQxtfY7f9kYU8thcaYdi9";
+  var standalone = navigator.standalone || (window.matchMedia && matchMedia("(display-mode: standalone)").matches);
+  if (/[?&]go=1/.test(location.search) || standalone) location.replace(APP);
+  else history.replaceState(null, "", location.pathname + "?go=1");
+</script>
+<style>
+  :root { color-scheme: dark; --bg: #111416; --fg: #e8eaeb; --muted: #98a1a8; --line: #2e353b; --accent: #d4a24e; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 17px/1.5 -apple-system, system-ui, sans-serif;
+    padding: max(24px, env(safe-area-inset-top)) max(20px, env(safe-area-inset-right)) 40px max(20px, env(safe-area-inset-left)); }
+  main { max-width: 440px; margin: 0 auto; display: flex; flex-direction: column; gap: 22px; }
+  .icon { width: 120px; height: 120px; border-radius: 27px; display: block; margin: 8px auto 0; box-shadow: 0 10px 30px rgba(0,0,0,.5); }
+  h1 { margin: 0; text-align: center; font-size: 26px; letter-spacing: .02em; }
+  ol { margin: 0; padding-left: 26px; display: flex; flex-direction: column; gap: 14px; }
+  b { color: var(--accent); }
+  .share { display: inline-block; width: 20px; height: 20px; vertical-align: -3px; }
+  p { margin: 0; color: var(--muted); font-size: 15px; }
+  a.btn { display: block; text-align: center; padding: 14px; border-radius: 12px; border: 1px solid var(--line); color: var(--fg); text-decoration: none; font-weight: 600; }
+</style>
+</head>
+<body>
+<main>
+  <img class="icon" src="apple-touch-icon.png" alt="Gun Safe icon">
+  <h1>Add Gun Safe to your iPhone</h1>
+  <ol>
+    <li>Tap the <b>Share</b> button
+      <svg class="share" viewBox="0 0 24 24" fill="none" stroke="#d4a24e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M8 7l4-4 4 4M6 11H5v10h14V11h-1"/></svg>
+      at the bottom of Safari.</li>
+    <li>Scroll down and tap <b>Add to Home Screen</b>.</li>
+    <li>If you see <b>Open as Web App</b>, switch it <b>off</b>. Then tap <b>Add</b>.</li>
+  </ol>
+  <p>The brass dial icon opens your inventory. You can delete the old icon with the Claude logo: press and hold it, then tap Remove Bookmark.</p>
+  <a class="btn" href="https://claude.ai/artifact/FBQxtfY7f9kYU8thcaYdi9">Open Gun Safe now</a>
+</main>
+</body>
+</html>
